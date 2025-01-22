@@ -1,7 +1,7 @@
 import Game.Levels.DemoWorld
 
 -- Here's what we'll put on the title screen
-Title "Hello World Game"
+Title "Hello Woorld Game"
 Introduction
 "
 This text appears on the starting page where one selects the world/level to play.

@@ -1,9 +1,9 @@
 import Game.Metadata
 
 World "DemoWorld"
-Level 1
+Level 2
 
-Title "Hello World"
+Title "Level 2"
 
 Introduction "This text is shown as first message when the level is played.
 You can insert hints in the proof below. They will appear in this side panel
@@ -26,4 +26,3 @@ Conclusion "This last message appears if the level is solved."
 NewTactic rw rfl
 -- NewTheorem Nat.add_comm Nat.add_assoc
 -- NewDefinition Nat Add Eq
-
