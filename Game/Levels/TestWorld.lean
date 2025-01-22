@@ -1,7 +1,7 @@
 import Game.Levels.TestWorld.L01_TestLvl
 
 World "TestWorld"
-Title "My First World"
+Title "Test World"
 
 Introduction
 "

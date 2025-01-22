@@ -5,5 +5,5 @@ World "DemoWorld"
 Title "Demo World"
 
 Introduction "
-This test introduction is shown before one enters level 1 of the demo world. Use markdown.
+This test2 introduction is shown before one enters level 1 of the demo world. Use markdown.
 "
