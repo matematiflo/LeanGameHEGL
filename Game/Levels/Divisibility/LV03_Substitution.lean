@@ -30,4 +30,4 @@ Great work! You have established the substitution property in ℕ.
 "
 
 -- NewTactic intro rcases rewrite exact
--- NewTheorem substitution_in_Nat
+NewTheorem substitution_in_Nat equality_implies_divide_in_Nat Nat.mul_assoc

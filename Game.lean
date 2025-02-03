@@ -1,4 +1,3 @@
-import Game.Levels.DemoWorld
 import Game.Levels.Divisibility
 
 -- Here's what we'll put on the title screen

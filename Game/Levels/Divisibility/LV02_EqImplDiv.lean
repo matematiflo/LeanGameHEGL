@@ -28,6 +28,5 @@ Conclusion "
 Congratulations! You have proven that if p equals u * v, then p divides u * v.
 "
 
-NewTactic Dvd.dvd dsimp rewrite Eq.symm
-NewTheorem Nat.mul_one
-NewDefinition cancellation_in_Nat
+NewTactic dsimp rewrite
+NewTheorem Nat.mul_one cancellation_in_Nat Eq.symm Dvd.dvd

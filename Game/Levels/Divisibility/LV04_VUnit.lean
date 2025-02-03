@@ -1,6 +1,5 @@
 import Game.Metadata
 import Game.Inventory
-import Game.Levels.Divisibility.LV01_PrimeIrred
 
 World "Divisibility"
 Level 4
@@ -45,3 +44,4 @@ Excellent! You have successfully proven that under the given conditions v is a u
 
 -- NewTactic intro rcases dsimp exists have conv constructor rewrite
 NewTheorem substitution_in_Nat
+NewTactic constructor

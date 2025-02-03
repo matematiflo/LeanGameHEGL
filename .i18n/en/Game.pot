@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Feb  3 00:51:23 2025\n"
+"POT-Creation-Date: Mon Feb  3 11:06:54 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -20,64 +20,6 @@ msgstr ""
 msgid "intermediate goal solved! 🎉"
 msgstr ""
 
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "Hello World"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You can either start using `«{h}»` or `«{g}»`."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use `«{h}»` now."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "You should use `«{g}»` now."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L01_HelloWorld
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_LevelTwo
-msgid "Level 2"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_LevelTwo
-msgid "P is prime"
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_LevelTwo
-msgid "You can either start using `«{h}»` or `«{g}»`."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_LevelTwo
-msgid "You should use `«{h}»` now."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_LevelTwo
-msgid "You should use `«{g}»` now."
-msgstr ""
-
-#: Game.Levels.DemoWorld.L02_LevelTwo
-msgid "This last message appears if the level is solved."
-msgstr ""
-
-#: Game.Levels.DemoWorld
-msgid "Demo World"
-msgstr ""
-
-#: Game.Levels.DemoWorld
-msgid "This test2 introduction is shown before one enters level 1 of the demo world. Use markdown."
-msgstr ""
-
 #: Game.Inventory
 msgid "This theorem allows you to cancel a positive multiplier from both sides of an equality in ℕ."
 msgstr ""
@@ -87,7 +29,57 @@ msgid "This theorem allows you to cancel a positive multiplier from both sides o
 msgstr ""
 
 #: Game.Inventory
-msgid "Test Test T3st"
+msgid ""
+msgstr ""
+
+#: Game.Inventory
+msgid ""
+msgstr ""
+
+#: Game.Inventory
+msgid "Multiplication is associative in ℕ.\n"
+"That is, for all natural numbers a, b, and c,\n"
+"  (a * b) * c = a * (b * c)."
+msgstr ""
+
+#: Game.Inventory
+msgid "Multiplication is commutative in ℕ.\n"
+"That is, for all natural numbers a and b,\n"
+"  a * b = b * a."
+msgstr ""
+
+#: Game.Inventory
+msgid "This theorem, proved in Level 1, states that if\n"
+"  c * a = c * b\n"
+"and\n"
+"  0 < c,\n"
+"then we can cancel c to conclude that a = b."
+msgstr ""
+
+#: Game.Inventory
+msgid "This theorem, proved in Level 2, shows that if a number p equals the product u * v,\n"
+"then p divides u * v."
+msgstr ""
+
+#: Game.Inventory
+msgid "This theorem, proved in Level 3, establishes a substitution property:\n"
+"if u = p * q and p = u * v, then p = p * (q * v)."
+msgstr ""
+
+#: Game.Inventory
+msgid "This theorem, proved in Level 4, shows that under the conditions\n"
+"  p is prime,\n"
+"  p divides u, and\n"
+"  p = u * v,\n"
+"the number v is a unit."
+msgstr ""
+
+#: Game.Inventory
+msgid "This theorem, proved in Level 5, shows that if\n"
+"  p is prime,\n"
+"  p divides v, and\n"
+"  p = v * u,\n"
+"then u is a unit."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV01_PrimeIrred
@@ -226,6 +218,98 @@ msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
 msgid "Excellent! You have successfully proven that under the given conditions v is a unit."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Case 2: Proving u is a Unit"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "In this level, we prove that under the following conditions, u is a unit.\n"
+"That is, if p is prime, p divides v, and p = v * u,\n"
+"then there exists a number q such that q * u = 1."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Start by introducing the hypothesis into your context."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Break the hypothesis into its components: the fact that p is prime, p divides v, and p = v * u."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "From the divisibility p ∣ v, extract a witness q such that v = p * q."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Simplify the definition of 'unit' (which requires showing the existence of an inverse)."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Provide the witness q to show that u has an inverse."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Apply the substitution property (from Level 3) to rewrite p as p * (q * u)."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Apply the cancellation law (from Level 1) to deduce that 1 = q * u."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Finally, construct the unit instance for u using the equality 1 = q * u."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Excellent! You have successfully proven that under the given conditions, u is a unit."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Prime Implies Irreducible"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "In this final level, we prove that every prime number is irreducible.\n"
+"That is, if a number p is prime, then for any factorization p = u * v, at least one of u or v must be a unit.\n"
+"This is a key property in number theory."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Begin by assuming that p is prime."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Unfold the definition of irreducible for p."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Now introduce arbitrary factors u and v and assume that p = u * v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Apply the 'equality_implies_divide_in_Nat' theorem (from Level 2) to conclude that p divides u * v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Since p is prime, it must divide at least one of the factors; use that to get p ∣ u ∨ p ∣ v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Perform a case analysis on whether p divides u or p divides v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "If p divides u, then Level 4’s result 'v_unit' tells us that v is a unit."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "If p divides v, then by rewriting p = u * v (using commutativity) and applying Level 5’s result 'u_unit', we conclude that u is a unit."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Congratulations! You have shown that every prime number is irreducible."
 msgstr ""
 
 #: Game.Levels.Divisibility
