@@ -1,5 +1,5 @@
 import Game.Levels.DemoWorld
-import Game.Levels.TestWorld
+import Game.Levels.Divisibility
 
 -- Here's what we'll put on the title screen
 Title "Hello Woorld Game"

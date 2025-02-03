@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Wed Jan 22 11:58:39 2025\n"
+"POT-Creation-Date: Mon Feb  3 00:51:23 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -51,9 +51,7 @@ msgid "Level 2"
 msgstr ""
 
 #: Game.Levels.DemoWorld.L02_LevelTwo
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
+msgid "P is prime"
 msgstr ""
 
 #: Game.Levels.DemoWorld.L02_LevelTwo
@@ -80,37 +78,161 @@ msgstr ""
 msgid "This test2 introduction is shown before one enters level 1 of the demo world. Use markdown."
 msgstr ""
 
-#: Game.Levels.TestWorld.L01_TestLvl
-msgid "Hello World"
+#: Game.Inventory
+msgid "This theorem allows you to cancel a positive multiplier from both sides of an equality in ℕ."
 msgstr ""
 
-#: Game.Levels.TestWorld.L01_TestLvl
-msgid "This text is shown as first message when the level is played.\n"
-"You can insert hints in the proof below. They will appear in this side panel\n"
-"depending on the proof a user provides."
+#: Game.Inventory
+msgid "This theorem allows you to cancel a positive multiplier from both sides of an equality in ℕ."
 msgstr ""
 
-#: Game.Levels.TestWorld.L01_TestLvl
-msgid "You can either start using `«{h}»` or `«{g}»`."
+#: Game.Inventory
+msgid "Test Test T3st"
 msgstr ""
 
-#: Game.Levels.TestWorld.L01_TestLvl
-msgid "You should use `«{h}»` now."
+#: Game.Levels.Divisibility.LV01_PrimeIrred
+msgid "Cancellation in ℕ"
 msgstr ""
 
-#: Game.Levels.TestWorld.L01_TestLvl
-msgid "You should use `«{g}»` now."
+#: Game.Levels.Divisibility.LV01_PrimeIrred
+msgid "In this level, we prove the cancellation law for natural numbers.\n"
+"That is, if multiplying two numbers by a positive number gives the same result,\n"
+"then the original numbers must be equal."
 msgstr ""
 
-#: Game.Levels.TestWorld.L01_TestLvl
-msgid "This last message appears if the level is solved."
+#: Game.Levels.Divisibility.LV01_PrimeIrred
+msgid "Use 'intro' to move the antecedent of the implication into your context."
 msgstr ""
 
-#: Game.Levels.TestWorld
-msgid "Test World"
+#: Game.Levels.Divisibility.LV01_PrimeIrred
+msgid "Start by breaking apart the hypothesis h into its two components."
 msgstr ""
 
-#: Game.Levels.TestWorld
+#: Game.Levels.Divisibility.LV01_PrimeIrred
+msgid "Now apply the cancellation property: if c > 0 and c * a = c * b, then a = b."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV01_PrimeIrred
+msgid "Well done! You have successfully proven that cancellation holds in ℕ."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Equality Implies Divisibility"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "In this level, we prove that if a natural number p equals the product of two numbers u and v,\n"
+"then p divides the product u * v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Start by introducing the equality p = u * v into your context."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Simplify the definition of divisibility. (Recall that p ∣ (u * v) means there exists a k such that p * k = u * v.)"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Provide the witness (here, 1) that proves the divisibility."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Use the fact that multiplying by one does not change a number."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Finish by using the symmetry of the equality."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Congratulations! You have proven that if p equals u * v, then p divides u * v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Substitution in ℕ"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "In this level, we prove a useful substitution property for natural numbers.\n"
+"If u = p * q and p = u * v, then we can rewrite p as p * (q * v)."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Introduce the hypothesis into the context."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Break apart the conjunction in the hypothesis into its components."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Replace u in the second equality using the fact u = p * q."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Apply associativity of multiplication to rearrange the product."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Conclude the proof by using the resulting equality."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Great work! You have established the substitution property in ℕ."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Proving v is a Unit"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "In this level, we prove that under the following conditions v is a unit.\n"
+"That is, if p is prime, p divides u, and p = u * v, then v must be a unit.\n"
+"Recall that a number v is a unit if there exists some q with q * v = 1."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Introduce the hypothesis into your context."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Decompose the hypothesis into its constituent parts."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "From the divisibility p ∣ u, extract a witness q such that u = p * q."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Simplify the definition of unit (which asserts the existence of a multiplicative inverse)."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Provide the witness q for v being a unit."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Use the substitution property from Level 3 to obtain an intermediate equality."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Apply the cancellation property (from Level 1) to deduce that 1 = q * v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Finally, conclude by constructing the unit for v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Excellent! You have successfully proven that under the given conditions v is a unit."
+msgstr ""
+
+#: Game.Levels.Divisibility
+msgid "Divisibility"
+msgstr ""
+
+#: Game.Levels.Divisibility
 msgid "This introduction text is shown when one first enters a world."
 msgstr ""
 

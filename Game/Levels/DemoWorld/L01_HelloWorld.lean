@@ -26,4 +26,3 @@ Conclusion "This last message appears if the level is solved."
 NewTactic rw rfl
 -- NewTheorem Nat.add_comm Nat.add_assoc
 -- NewDefinition Nat Add Eq
-
