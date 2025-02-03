@@ -18,7 +18,7 @@ Statement (a b c : Nat) : (c * a = c * b) ∧ (0 < c) → a = b := by
   intro h
   Hint "Start by breaking apart the hypothesis h into its two components."
   rcases h with ⟨ca_eq_cb, zero_smaller_c⟩
-  Hint "Now apply the cancellation property: if c > 0 and c * a = c * b, then a = b."
+  Hint "Now apply the function `Nat.mul_left_cancel`."
   exact Nat.mul_left_cancel zero_smaller_c ca_eq_cb
 
 Conclusion "
