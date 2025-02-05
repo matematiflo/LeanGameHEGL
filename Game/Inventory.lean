@@ -1,5 +1,4 @@
 import Game.Metadata
-
 -- Level 1
 /-- This theorem allows you to cancel a positive multiplier from both sides of an equality in ℕ. -/
 TheoremDoc Nat.mul_left_cancel as "Nat.mul_left_cancel" in "Lean"
@@ -69,6 +68,10 @@ This theorem, proved in Level 5, shows that if
 then u is a unit.
 -/
 TheoremDoc u_unit as "u_unit" in "Levels"
+
+/-- Theorem proves in Level 6
+  -/
+TheoremDoc prime_is_irred as "prime_is_irred" in "Levels"
 
 
 --Definitions

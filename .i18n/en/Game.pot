@@ -1,7 +1,7 @@
 msgid ""
 msgstr "Project-Id-Version: Game v4.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: Mon Feb  3 11:06:54 2025\n"
+"POT-Creation-Date: Wed Feb  5 11:30:33 2025\n"
 "Last-Translator: \n"
 "Language-Team: none\n"
 "Language: en\n"
@@ -82,6 +82,10 @@ msgid "This theorem, proved in Level 5, shows that if\n"
 "then u is a unit."
 msgstr ""
 
+#: Game.Inventory
+msgid "Theorem proves in Level 6"
+msgstr ""
+
 #: Game.Levels.Divisibility.LV01_PrimeIrred
 msgid "Cancellation in ℕ"
 msgstr ""
@@ -93,15 +97,23 @@ msgid "In this level, we prove the cancellation law for natural numbers.\n"
 msgstr ""
 
 #: Game.Levels.Divisibility.LV01_PrimeIrred
-msgid "Use 'intro' to move the antecedent of the implication into your context."
+msgid "Use 'intro p', this creates a new element p to your local context."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV01_PrimeIrred
-msgid "Start by breaking apart the hypothesis h into its two components."
+msgid "Start by breaking apart the proof p into its two components. Use rcases"
 msgstr ""
 
 #: Game.Levels.Divisibility.LV01_PrimeIrred
-msgid "Now apply the cancellation property: if c > 0 and c * a = c * b, then a = b."
+msgid "You use rcases by breaking your hypothesis into two components that you can name to reference them in subsequent steps. Here you could write 'rcases p with ⟨ca_eq_cb, zero_smaller_c⟩'"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV01_PrimeIrred
+msgid "Now apply the cancellation property: if 0 < c and c * a = c * b, then a = b. Use Nat.mul_left_cancel"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV01_PrimeIrred
+msgid "With the 'exact' tactic, you can finish the proof by directly applying Nat.mul_left_cancel. 'exact Nat.mul_left_cancel zero_smaller_c ca_eq_cb"
 msgstr ""
 
 #: Game.Levels.Divisibility.LV01_PrimeIrred
@@ -118,23 +130,43 @@ msgid "In this level, we prove that if a natural number p equals the product of 
 msgstr ""
 
 #: Game.Levels.Divisibility.LV02_EqImplDiv
-msgid "Start by introducing the equality p = u * v into your context."
+msgid "Start by introducing a proof of the equality p = u * v into your context."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV02_EqImplDiv
-msgid "Simplify the definition of divisibility. (Recall that p ∣ (u * v) means there exists a k such that p * k = u * v.)"
+msgid "Introduce the hypothesis with 'intro p_eq_uv'."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV02_EqImplDiv
-msgid "Provide the witness (here, 1) that proves the divisibility."
+msgid "Simplify the definition of divisibility. (Recall that p ∣ (u * v) means there exists a natural number k such that p * k = u * v.)"
 msgstr ""
 
 #: Game.Levels.Divisibility.LV02_EqImplDiv
-msgid "Use the fact that multiplying by one does not change a number."
+msgid "Use 'dsimp only [Dvd.dvd]' to unfold the definition and expose the existential quantifier."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV02_EqImplDiv
-msgid "Finish by using the symmetry of the equality."
+msgid "Provide a witness for the existential quantifier. Here, the number 1 will work."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "The 'exists' tactic allows you to supply a specific value for the existential statement. In this case, write 'exists 1'."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Use the fact that multiplying by one does not change a number to simplify the equation."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Rewrite using 'rewrite [Nat.mul_one p]' to convert p * 1 to p."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "Finish by applying the symmetry of the equality to conclude the proof."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV02_EqImplDiv
+msgid "With 'exact Eq.symm p_eq_uv' you can complete the proof."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV02_EqImplDiv
@@ -155,19 +187,39 @@ msgid "Introduce the hypothesis into the context."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV03_Substitution
+msgid "Use 'intro h' to bring the conjunction (u = p * q) ∧ (p = u * v) into scope."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
 msgid "Break apart the conjunction in the hypothesis into its components."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV03_Substitution
-msgid "Replace u in the second equality using the fact u = p * q."
+msgid "Apply 'rcases h with ⟨u_eq_pq, p_eq_uv⟩' to extract both equalities, so you have u_eq_pq : u = p * q and p_eq_uv : p = u * v."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV03_Substitution
-msgid "Apply associativity of multiplication to rearrange the product."
+msgid "Replace u in the second equality with p * q using the equality u = p * q."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV03_Substitution
-msgid "Conclude the proof by using the resulting equality."
+msgid "Execute 'rewrite [u_eq_pq] at p_eq_uv' to substitute u with p * q in p_eq_uv."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Apply the associativity of multiplication to rearrange the product into the desired form."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Use 'rewrite [Nat.mul_assoc] at p_eq_uv' so that p_eq_uv becomes p = p * (q * v)."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Conclude the proof by using the equality obtained."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV03_Substitution
+msgid "Finish with 'exact p_eq_uv' to complete the proof."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV03_Substitution
@@ -181,7 +233,7 @@ msgstr ""
 #: Game.Levels.Divisibility.LV04_VUnit
 msgid "In this level, we prove that under the following conditions v is a unit.\n"
 "That is, if p is prime, p divides u, and p = u * v, then v must be a unit.\n"
-"Recall that a number v is a unit if there exists some q with q * v = 1."
+"Recall that a number v is a unit if  there exists some q with q * v = 1."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
@@ -189,7 +241,15 @@ msgid "Introduce the hypothesis into your context."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
+msgid "Begin with 'intro h' to bring the whole hypothesis into scope."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
 msgid "Decompose the hypothesis into its constituent parts."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Apply 'rcases h with ⟨p_prime, p_dvd_u, p_eq_uv⟩' to split the conjunction into three separate assumptions."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
@@ -197,7 +257,15 @@ msgid "From the divisibility p ∣ u, extract a witness q such that u = p * q."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
+msgid "Use 'rcases p_dvd_u with ⟨q, u_eq_pq⟩' to obtain a natural number q and the equality u = p * q."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
 msgid "Simplify the definition of unit (which asserts the existence of a multiplicative inverse)."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Unfold the definition with 'dsimp only [unit]'."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
@@ -205,7 +273,19 @@ msgid "Provide the witness q for v being a unit."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
+msgid "The 'exists' tactic supplies a value to fulfill the existential claim. Use 'exists q'."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
 msgid "Use the substitution property from Level 3 to obtain an intermediate equality."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Invoke the substitution property with: 'have p_eq_pqv : p = p * (q * v) := substitution_in_Nat p q u v ⟨u_eq_pq, p_eq_uv⟩'."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "The 'have' tactic lets you introduce a new statement for later use. It is similar to stating an auxiliary lemma inside your proof. Write the statement, a colon with its type, then ':=' followed by the proof or expression."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
@@ -213,7 +293,37 @@ msgid "Apply the cancellation property (from Level 1) to deduce that 1 = q * v."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
+msgid "Next, we prove 1 = q * v using a 'have' block. Remember that when using 'by', the subsequent proof must be indented."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Within the 'by' block, start by rewriting the left-hand side of the equality. The 'conv' tactic allows you to focus on a specific part of an expression."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Focus on the left-hand side using 'lhs'."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Rewrite the left-hand side using the identity '← Nat.mul_one p'."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "After rewriting, apply the cancellation property. This line must be indented further inside the 'by' block."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
 msgid "Finally, conclude by constructing the unit for v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV04_VUnit
+msgid "Use the 'constructor' tactic to build the unit, supplying the two required proofs. In the second part, use 'rewrite [Nat.mul_comm]' to adjust the order before applying the proof.\n"
+"constructor¬\n"
+"· exact one_is_qv_symm¬\n"
+"· rewrite [Nat.mul_comm]¬\n"
+"exact one_is_qv.symm\n"
+"\n"
+"Write · with a backslash and a dot"
 msgstr ""
 
 #: Game.Levels.Divisibility.LV04_VUnit
@@ -235,7 +345,15 @@ msgid "Start by introducing the hypothesis into your context."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV05_UUnit
-msgid "Break the hypothesis into its components: the fact that p is prime, p divides v, and p = v * u."
+msgid "Use 'intro h' to bring the entire hypothesis into scope."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Break the hypothesis into its components: p is prime, p divides v, and p = v * u."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Decompose the hypothesis with 'rcases h with ⟨p_prime, p_dvd_v, p_eq_uv⟩'."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV05_UUnit
@@ -243,7 +361,15 @@ msgid "From the divisibility p ∣ v, extract a witness q such that v = p * q."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV05_UUnit
-msgid "Simplify the definition of 'unit' (which requires showing the existence of an inverse)."
+msgid "Use 'rcases p_dvd_v with ⟨q, v_eq_pq⟩' to obtain q and the equality v = p * q."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Simplify the definition of 'unit' (which requires providing an inverse for u)."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Unfold the definition with 'dsimp only [unit]'."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV05_UUnit
@@ -251,7 +377,15 @@ msgid "Provide the witness q to show that u has an inverse."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV05_UUnit
+msgid "Use the 'exists' tactic to supply the witness by writing 'exists q'."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
 msgid "Apply the substitution property (from Level 3) to rewrite p as p * (q * u)."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Define an auxiliary statement with 'have p_eq_pqu : p = p * (q * u) := substitution_in_Nat p q v u ⟨v_eq_pq, p_eq_uv⟩'."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV05_UUnit
@@ -259,7 +393,15 @@ msgid "Apply the cancellation law (from Level 1) to deduce that 1 = q * u."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV05_UUnit
+msgid "Define another auxiliary statement with a 'have' block. Inside the block, use a 'conv' block to rewrite the left-hand side of p_eq_pqu with '← Nat.mul_one p', then apply 'exact cancellation_in_Nat 1 (q * u) p ⟨p_eq_pqu, p_prime.2⟩'. Note that the 'lhs' in the conv block targets the left-hand side of the equality."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
 msgid "Finally, construct the unit instance for u using the equality 1 = q * u."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV05_UUnit
+msgid "Use the 'constructor' tactic to build the unit. In the first part, apply the symmetry of one_is_qu, and in the second part, rewrite with 'Nat.mul_comm' before applying the symmetry."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV05_UUnit
@@ -277,7 +419,15 @@ msgid "In this final level, we prove that every prime number is irreducible.\n"
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Final Boss"
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
 msgid "Begin by assuming that p is prime."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Start with 'intro p_prime' to assume that p is prime and add it to your context."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
@@ -285,7 +435,15 @@ msgid "Unfold the definition of irreducible for p."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Use 'dsimp only [irred]' to reveal the structure of irreducibility."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
 msgid "Now introduce arbitrary factors u and v and assume that p = u * v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Use 'intro u v' to introduce u and v, then 'intro p_is_uv' to assume the equality p = u * v."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
@@ -293,7 +451,15 @@ msgid "Apply the 'equality_implies_divide_in_Nat' theorem (from Level 2) to con
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Define an auxiliary statement: 'have p_div_uv : p ∣ u * v := equality_implies_divide_in_Nat p u v p_is_uv'."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
 msgid "Since p is prime, it must divide at least one of the factors; use that to get p ∣ u ∨ p ∣ v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Write 'have p_div_u_or_v : p ∣ u ∨ p ∣ v := p_prime.1 u v p_div_uv' to derive the disjunction."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
@@ -301,11 +467,23 @@ msgid "Perform a case analysis on whether p divides u or p divides v."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "Use 'rcases p_div_u_or_v with p_div_u | p_div_v' to split the disjunction into two cases. The labels 'inl' and 'inr' indicate the left and right cases, respectively: 'inl' corresponds to p ∣ u and 'inr' corresponds to p ∣ v."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
 msgid "If p divides u, then Level 4’s result 'v_unit' tells us that v is a unit."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "In the 'inl' case (the left side of the disjunction), choose the right disjunct with 'right' and apply 'v_unit' with the appropriate arguments."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
 msgid "If p divides v, then by rewriting p = u * v (using commutativity) and applying Level 5’s result 'u_unit', we conclude that u is a unit."
+msgstr ""
+
+#: Game.Levels.Divisibility.LV06_FinalBoss
+msgid "In the 'inr' case (the right side of the disjunction), choose the left disjunct with 'left'. Then, rewrite the equality using 'rewrite [Nat.mul_comm] at p_is_uv' and apply 'u_unit' with the proper arguments."
 msgstr ""
 
 #: Game.Levels.Divisibility.LV06_FinalBoss
@@ -317,25 +495,42 @@ msgid "Divisibility"
 msgstr ""
 
 #: Game.Levels.Divisibility
-msgid "This introduction text is shown when one first enters a world."
-msgstr ""
-
-#: Game
-msgid "Hello Woorld Game"
-msgstr ""
-
-#: Game
-msgid "This text appears on the starting page where one selects the world/level to play.\n"
-"You can use markdown."
-msgstr ""
-
-#: Game
-msgid "Here you can put additional information about the game. It is accessible\n"
-"from the starting through the drop-down menu.\n"
+msgid "Welcome to the Divisibility World.\n"
 "\n"
-"For example: Game version, Credits, Link to Github and Zulip, etc.\n"
+"In this world, you will work through a series of levels that explore basic properties of divisibility in the natural numbers. Each level builds on the previous one:\n"
+"- Level 1 introduces the cancellation law.\n"
+"- Level 2 shows that equality implies divisibility.\n"
+"- Level 3 covers a substitution property.\n"
+"- Level 4 and Level 5 establish unit properties.\n"
+"- Level 6 brings these concepts together to prove that every prime number is irreducible."
+msgstr ""
+
+#: Game
+msgid "Prototype for a Heidelberg Lean Game"
+msgstr ""
+
+#: Game
+msgid "Welcome to the Prototype for a Heidelberg Lean Game!\n"
 "\n"
-"Use markdown."
+"In this game, you will explore a single world with 6 levels.\n"
+"The final level (Level 6) proves that every prime number is irreducible.\n"
+"This prototype is designed to demonstrate the structure and flow of a Lean game."
+msgstr ""
+
+#: Game
+msgid "This game was created as part of the HEGL (Heidelberg Experimental Geometry Lab) Illustrating Mathematics Seminar 2024/2025 at the University of Heidelberg. For more details, visit the [Seminar page](https://matematiflo.github.io/HEGL_IMS_WiSe_2024/).\n"
+"\n"
+"Credits:\n"
+"- Adriano Messina\n"
+"- Alina Stock\n"
+"- Florent Schaffhauser\n"
+"- Hanna Rothe\n"
+"- Heide Frank\n"
+"- Johannes Kadel\n"
+"- Jonas Schäfer\n"
+"- Katrin Weiß\n"
+"- Sarah Gramilch\n"
+"- Vincent Voß"
 msgstr ""
 
 #: Game
