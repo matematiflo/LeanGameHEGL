@@ -17,13 +17,11 @@ This game was created as part of the HEGL (Heidelberg Experimental Geometry Lab)
 Credits:
 - Adriano Messina
 - Alina Stock
-- Florent Schaffhauser
 - Hanna Rothe
 - Heide Frank
 - Johannes Kadel
 - Jonas Schäfer
 - Katrin Weiß
-- Sarah Gramilch
 - Vincent Voß
 "
 
