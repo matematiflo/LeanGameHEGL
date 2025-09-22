@@ -1,5 +1,4 @@
 import Game.Levels.Divisibility
-
 -- Here's what we'll put on the title screen
 Title "Prototype for a Heidelberg Lean Game"
 Introduction

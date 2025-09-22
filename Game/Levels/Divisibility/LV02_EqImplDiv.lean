@@ -23,10 +23,10 @@ Statement equality_implies_divide_in_Nat (p u v : Nat) : p = u * v → p ∣ (u 
   Hint (hidden := true) "The 'exists' tactic allows you to supply a specific value for the existential statement. In this case, write 'exists 1'."
   exists 1
   Hint "Use the fact that multiplying by one does not change a number to simplify the equation."
-  Hint (hidden := true) "Rewrite using 'rewrite [Nat.mul_one p]' to convert p * 1 to p."
+  Hint (hidden := true) "Rewrite using 'rewrite [Nat.mul_one {p}]' to convert p * 1 to p."
   rewrite [Nat.mul_one p]
   Hint "Finish by applying the symmetry of the equality to conclude the proof."
-  Hint (hidden := true) "With 'exact Eq.symm p_eq_uv' you can complete the proof."
+  Hint (hidden := true) "With 'exact Eq.symm {p_eq_uv}' you can complete the proof."
   exact Eq.symm p_eq_uv
 
 
@@ -35,5 +35,5 @@ Conclusion "
 Congratulations! You have proven that if p equals u * v, then p divides u * v.
 "
 
-NewTactic dsimp rewrite
+NewTactic dsimp rewrite «exists»
 NewTheorem Nat.mul_one cancellation_in_Nat Eq.symm Dvd.dvd
